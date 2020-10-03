@@ -1,0 +1,179 @@
+<button pButton label="Print" type="button" icon="ui-icon-print" (click)="print()"
+        style="display:block;margin-bottom: 20px; margin-left: 6px;"></button>
+<div class="ui-g">
+    <div class="ui-g-12">
+        <div id="invoice-content">
+            <div class="card invoice-wrapper">
+                <div class="ui-g invoice-header">
+                    <div class="ui-g-6">
+                        <h1 class="title">INVOICE</h1>
+                    </div>
+                    <div class="ui-g-6 logo-adress">
+                        <img src="assets/layout/images/extensions/prime-logo.svg" alt="ultima-layout" />
+                        <p>Bilkent Cyberpark, Cyberplaza, 1605 St,
+                            <br />
+                            Vakıf Building, Ankara, Turkey</p>
+                    </div>
+                </div>
+                <div class="card invoice-table billto-table">
+                    <div class="ui-g table-header">
+                        <div class="ui-g-4">
+                            <h2 class="header">BILL TO </h2>
+                        </div>
+                        <div class="ui-g-3">
+                            <h2 class="header">DATE </h2>
+                        </div>
+                        <div class="ui-g-3">
+                            <h2 class="header">INVOICE NO </h2>
+                        </div>
+                        <div class="ui-g-2">
+                            <h2 class="header">NOTES </h2>
+                        </div>
+                    </div>
+                    <div class="ui-g table-content-row">
+                        <div class="ui-g-4">
+                            <p>TOYOKSU SYSCOM CORPORATION 11-27, MEIEKI 4-CHROME
+                                NAKAMURA-KU, NAGOYA 450-0002 JAPAN </p>
+                        </div>
+                        <div class="ui-g-3">
+                            <p>30/08/2019 </p>
+                        </div>
+                        <div class="ui-g-3">
+                            <p>A/3100 </p>
+                        </div>
+                        <div class="ui-g-2">
+                            <p>N/A </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card invoice-table products-table">
+                    <div class="ui-g table-header">
+                        <div class="ui-g-4  row-title">
+                            <h2 class="header">DESCRIPTION </h2>
+                        </div>
+                        <div class="ui-g-2">
+                            <h2 class="header">QUANTITY </h2>
+                        </div>
+                        <div class="ui-g-3">
+                            <h2 class="header">UNIT PRICE </h2>
+                        </div>
+                        <div class="ui-g-3">
+                            <h2 class="header">LINE TOTAL </h2>
+                        </div>
+                    </div>
+                    <div class="ui-g table-content-row">
+                        <div class="ui-g-4 row-title">
+                            <p>1 Year PrimeFaces Elite Subscription </p>
+                        </div>
+                        <div class="ui-g-2">
+                            <p>4 </p>
+                        </div>
+                        <div class="ui-g-3">
+                            <p>$99.00</p>
+                        </div>
+                        <div class="ui-g-3 total">
+                            <p>$396.00 </p>
+                        </div>
+                        <div class="ui-g-4 row-title">
+                            <p>PrimeFaces Ultima Extended License </p>
+                        </div>
+                        <div class="ui-g-2">
+                            <p>1</p>
+                        </div>
+                        <div class="ui-g-3">
+                            <p>$790.00</p>
+                        </div>
+                        <div class="ui-g-3 total">
+                            <p>$790.00 </p>
+                        </div>
+                        <div class="ui-g-4 row-title">
+                            <p>PrimeFaces Prestige Basic License </p>
+                        </div>
+                        <div class="ui-g-2">
+                            <p>2</p>
+                        </div>
+                        <div class="ui-g-3">
+                            <p>$59.00</p>
+                        </div>
+                        <div class="ui-g-3 total">
+                            <p>$118.0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-g">
+                    <div class="ui-g-12 ui-md-12 ui-lg-6 table-g-6">
+                        <div class="ui-g">
+                            <div class="card invoice-table bank-table">
+                                <div class="ui-g table-header">
+                                    <div class="ui-g-12 row-title ">
+                                        <h2 class="header">BANK </h2>
+                                    </div>
+                                </div>
+                                <div class="ui-g table-content-row">
+                                    <div class="ui-g-4 row-title">
+                                        <h2>BANK</h2>
+                                    </div>
+                                    <div class="ui-g-8">
+                                        <p>BestBank </p>
+                                    </div>
+                                    <div class="ui-g-4 row-title">
+                                        <h2>ACCOUNT BENEFICIARY</h2>
+                                    </div>
+                                    <div class="ui-g-8">
+                                        <p>PrimeTek Cagatay Civici </p>
+                                    </div>
+                                    <div class="ui-g-4 row-title">
+                                        <h2>SWIFT</h2>
+                                    </div>
+                                    <div class="ui-g-8">
+                                        <p>BESTTRISSXXX </p>
+                                    </div>
+                                    <div class="ui-g-2 row-title">
+                                        <h2>IBAN</h2>
+                                    </div>
+                                    <div class="ui-g-10">
+                                        <p>TR164406309006053060207535 </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-g-12 ui-md-12 ui-lg-6 table-g-6">
+                        <div class="ui-g">
+                            <div class="card invoice-table">
+                                <div class="ui-g table-header">
+                                    <div class="ui-g-12 row-title">
+                                        <h2 class="header">TOTAL </h2>
+                                    </div>
+                                </div>
+                                <div class="ui-g table-content-row">
+                                    <div class="ui-g-9">
+                                        <h2>SUBTOTAL</h2>
+                                    </div>
+                                    <div class="ui-g-3 total">
+                                        <p>$1304.00</p>
+                                    </div>
+                                    <div class="ui-g-9">
+                                        <h2>VAT</h2>
+                                    </div>
+                                    <div class="ui-g-3 total">
+                                        <p>$234.72 </p>
+                                    </div>
+                                    <div class="ui-g-9">
+                                        <h2>TOTAL</h2>
+                                    </div>
+                                    <div class="ui-g-3 total">
+                                        <p>$1538.72 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

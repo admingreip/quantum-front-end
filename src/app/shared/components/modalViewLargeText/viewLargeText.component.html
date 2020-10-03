@@ -1,0 +1,10 @@
+<p-dialog header="{{titulo}}" [width]="widthDialog"
+	[height]="heightDialog" [(visible)]="displayDialog" [responsive]="true"
+	[modal]="true" (onHide)='onHide($event)' (onShow)='onShow($event)'>
+<div [ngStyle]="{'height':heightContentDialog + 'px'}"
+	class="dialog-scroll">
+	<div class="ui-g">
+		<div class="ui-g-12">{{textLarge}}</div>
+	</div>
+</div>
+</p-dialog>

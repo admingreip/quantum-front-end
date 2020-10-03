@@ -1,0 +1,38 @@
+<div class="login-body">
+    <div class="card login-panel ui-fluid">
+        <form [formGroup]="formLogin" (ngSubmit)="login()">
+            <p-messages [(value)]="msgs"></p-messages>
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <img src="./assets/layout/images/logo-ultima.svg">
+                <!---
+                <svg width="250" height="60" viewBox="0 0 250 60">
+                    <text x="10" y="40" style="font-family: Arial Narrow;font-size: xx-large; font-weight: bold; color: purple;">SYSDE PENSION</text>
+                    <path class="linea_base" style="font-size: x-large; color: blue; stroke-width:.5; fill:none;"></path>
+                 </svg>
+                -->
+            </div>
+            <div class="ui-g-12">
+                <span class="md-inputfield">
+                    <input type="text" pInputText autocomplete="off" formControlName="user">
+                    <label>Username</label>
+                </span>
+            </div>
+            <div class="ui-g-12">
+                <span class="md-inputfield">
+                    <input type="password"  pInputText autocomplete="off" formControlName="password">
+                    <label>Password</label>
+                </span>
+            </div>
+            <div class="ui-g-12">
+                <button type="submit" pButton [disabled]="!formLogin.valid"
+                        icon="ui-icon-lock-open" label="Ingresar"></button>
+            </div>
+            <div class="ui-g-12">
+                <label>{{appVersion}}</label>
+            </div>
+
+        </div>
+        </form>
+    </div>
+</div>

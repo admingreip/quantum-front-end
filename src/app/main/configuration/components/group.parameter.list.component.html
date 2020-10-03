@@ -1,0 +1,89 @@
+<p-panel header="{{'titGeGroupParameter' | translate}}">
+    <div class="ui-g ui-fluid">
+        <div class="ui-g-12 ui-lg-12">
+            <p-toast key="tst" [style]="{marginTop: '70px'}"></p-toast>
+            <p-fieldset legend="{{'titGeFiltro' | translate}}">
+                <div class="ui-g form-group">
+
+                    <div class="ui-g-12 ui-md-4">
+                        <span class="md-inputfield"> <input pInputText id="nombreId" [(ngModel)]="filtro.nombre" />
+                            <label>{{'lblGeGroupParameterName'
+                            | translate}}</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12 ui-md-2">
+                        <p-dropdown [options]="sitTipos" [(ngModel)]="filtro.tipo"></p-dropdown>
+                    </div>
+                    <div class="ui-g-12 ui-md-2">
+                        <button pButton icon="ui-icon-find-in-page" (click)="search()"
+                            label="{{'btnGeSearch' | translate}} ({{totalRows}})"></button>
+                    </div>
+                </div>
+                <br>
+                <p-footer>
+                    <div class="ui-g"></div>
+                </p-footer>
+            </p-fieldset>
+            <br>
+            <p-toolbar>
+                <div class="ui-toolbar-group-left">
+                    <button type="button" pButton icon="ui-icon-add" class="green-btn" (click)="goFormNew()"
+                        label="{{'btnGeNew' | translate}}"></button>
+                </div>
+                <div class="ui-toolbar-group-right">
+                    <!-- <p-splitButton label="{{'geBtnNuevo' | translate}}" icon="ui-icon-add" [model]="items"></p-splitButton> -->
+                </div>
+            </p-toolbar>
+            <p-table [value]="list" selectionMode="single" dataKey="id" [paginator]="true" [rows]="itemsPerPage"
+                [responsive]="true" [totalRecords]="totalRows">
+                <!-- <ng-template pTemplate="caption">
+    
+            </ng-template> -->
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="font-weight: bold; width: 100px">{{'lblGeId' |
+                    translate}}</th>
+                        <th style="font-weight: bold; width: 40%">{{'lblGeGroupParameterName'
+                    | translate}}</th>
+                        <th style="font-weight: bold; width: 10%">{{'lblGeGroupParameterType'
+                    | translate}}</th>
+                        <th style="font-weight: bold; width: 10%"></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-dto>
+                    <tr>
+                        <td><span class="ui-column-title">{{'lblGeId' |
+                        translate}}</span> {{dto.id}}</td>
+                        <td><span class="ui-column-title">{{'lblGeGroupParameterName'
+                        | translate}}</span> {{dto.nombre}}</td>
+                        <td><span class="ui-column-title">{{'lblGeGroupParameterType'
+                        | translate}}</span> {{dto.tipo_desc}}</td>
+                        <td style="text-align: center">
+                            <button pButton type="button" (click)="goFormEdit(dto.id)" icon="ui-icon-pencil"
+                                class="deep-orange-btn"></button>
+
+                            <button pButton type="button" (click)="goFormEdit(dto.id)" icon="ui-icon-remove-red-eye"
+                                class="ui-button-info"></button>
+
+                            <button pButton type="button" (click)="goFormNewClone(dto.id)" icon="ui-icon-content-copy"
+                                class="indigo-btn"></button>
+
+                            <button pButton type="button" (click)="goDelete(dto.id)" icon="ui-icon-close"
+                                class="red-btn flat"></button>
+                        </td>
+
+                    </tr>
+                </ng-template>
+            </p-table>
+            
+
+        </div>
+    </div>
+</p-panel>
+
+<p-confirmDialog width="425" icon="fa fa-question-circle" #cd>
+    <footer>
+        <button type="button" pButton icon="fa-close" label="{{'btnGeNo' | translate}}" (click)="cd.reject()"></button>
+        <button type="button" pButton icon="fa-check" label="{{'btnGeYes' | translate}}" (click)="cd.accept()"></button>
+    </footer>
+</p-confirmDialog>
