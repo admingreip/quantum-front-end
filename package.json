@@ -30,6 +30,7 @@
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^5.0.0",
     "chart.js": "2.7.3",
+    "colors": "^1.4.0",
     "intl": "1.2.5",
     "primeflex": "1.0.0",
     "primeng": "9.0.2",
