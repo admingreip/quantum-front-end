@@ -32,5 +32,6 @@
     "titGeFormView": "View",
     "titGeGroupParameter": "Parameter Group",
     "titSuccessfully": "Transaction Message",
-    "titGeFiltro":"Filters Search"
+    "titGeFiltro":"Filters Search",
+    "msgGeConfirmLogout":"You are sure to logout?"
 }

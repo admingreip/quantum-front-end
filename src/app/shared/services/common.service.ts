@@ -44,6 +44,17 @@ export class CommonService {
     UtlStorage.set('system', authResponse.system);
   }
 
+  static clearStorageSession(): void {
+    UtlStorage.delete('access_token');
+    UtlStorage.delete('refresh_token');
+    UtlStorage.delete('token');
+    UtlStorage.delete('menu');
+    UtlStorage.delete('authorities');
+    UtlStorage.delete('username');
+    UtlStorage.delete('system');
+    console.log('Se borra el clean storage');
+  }
+
   /**
    * Metodo estatico para obtener el token bearer de la session del usuario
    */

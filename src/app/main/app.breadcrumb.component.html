@@ -22,8 +22,17 @@
         <a routerLink="/" title="Bookmark">
             <i class="material-icons">bookmark</i>
         </a>
-        <a routerLink="/" title="Logout">
+        <a routerLink="" title="Logout"  (click)="logout()"> 
             <i class="material-icons">power_settings_new</i>
         </a>
     </div>
+
 </div>
+
+
+<p-confirmDialog width="425" icon="fa fa-question-circle" #cd>
+    <footer>
+        <button type="button" pButton icon="fa-close" label="{{'btnGeNo' | translate}}" (click)="cd.reject()"></button>
+        <button type="button" pButton icon="fa-check" label="{{'btnGeYes' | translate}}" (click)="cd.accept()"></button>
+    </footer>
+</p-confirmDialog>
